@@ -1,3 +1,5 @@
+from weather import Weather
+
 class Analysis(Weather):
     def __init__(self, location, date):
         super().__init__(location, date)  
@@ -20,10 +22,10 @@ class Analysis(Weather):
         print(condition_message)
 
         kelvin_temp = self.kelvin(self.temperature)
-        print(f"{kelvin_temp}")
+        print(f"{kelvin_temp}°K")
 
         fahrenheit_temp = self.fahrenheit(self.temperature)
-        print(fahrenheit_temp)
+        print(f"{fahrenheit_temp}°F")
 
     def average_temp(self):
         df = pd.DataFrame(self.data["days"])
@@ -50,8 +52,8 @@ class Analysis(Weather):
 
     def kelvin(self, temperature):
         k_temperature = temperature + 273.15
-        return f"The temperature is displayed in Kelvin: {k_temperature}."
+        return f"The temperature is displayed in Kelvin: {k_temperature}°K."
 
     def fahrenheit(self, temperature):
         f_temperature = temperature * (9/5) + 32
-        return f"The temperature is displayed in Fahrenheit: {f_temperature}."
+        return f"The temperature is displayed in Fahrenheit: {f_temperature}°F."
