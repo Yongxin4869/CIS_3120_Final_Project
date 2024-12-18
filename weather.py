@@ -9,6 +9,15 @@ class weather:
         self.date = date
         self.url = f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{location}/{date}?unitGroup=metric&key={api}&contentType=json"
 
+    
+    def current_location(self):
+        return f"This is the weather result for {self.location}."
+    def current_temperature(self):
+        return f"The current temperature is {self.temperature}"
+    def current_date(self):
+        return f"This is the latest data. It was the data of {self.date}"
+
+    
     def __str__(self):
         return f"Location:{self.location}\nDate:{self.date}\nToday's Average Temperature:{self.temperature}"
 
