@@ -33,16 +33,7 @@ class Analysis(Weather):
             return "The temperature is moderate. Wear something comfortable."
 
     def condition(self, condition):
-        if condition == "Rainy":
-            return "It's rainy outside! Remember to take an umbrella!"
-        elif condition == "Sunny":
-            return "Wow! What a sunny day! It's a great opportunity to go out and enjoy nature."
-        elif condition == "Partially cloudy":
-            return "It's Partially cloudy now."
-        elif condition == "Overcast":
-            return "It's Overcast."
-        else:
-            return "The weather is a bit unusual now. Please take care! Try again later it may change."
+        return f"This is the description for today: {self.data["description"]}"
 
     def kelvin(self, temperature):
         k_temperature = temperature + 273.15
