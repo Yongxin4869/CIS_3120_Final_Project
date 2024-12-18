@@ -1,3 +1,7 @@
+from key import API_KEY     #Import my API_KEY from another file
+import requests
+import pandas as pd
+
 class weather:
     def __init__(self, location, date=None):     #Location is mandatory, but date is not. 
         self.location = location
