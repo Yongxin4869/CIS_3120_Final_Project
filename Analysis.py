@@ -12,9 +12,6 @@ class Analysis(Weather):
         print(self.current_temperature())
         print(self.current_date())
 
-        average_temp = self.average_temp()
-        print(f"Average Temperature: {average_temp}")
-
         cloth_suggestion = self.cloth_suggestion(self.temperature)
         print(cloth_suggestion)
 
@@ -27,11 +24,6 @@ class Analysis(Weather):
         fahrenheit_temp = self.fahrenheit(self.temperature)
         print(f"{fahrenheit_temp}°F")
 
-    def average_temp(self):
-        df = pd.DataFrame(self.data["days"])
-        average = df["temp"].mean()
-        return average
-        
     def cloth_suggestion(self, temperature):
         if temperature > 30:
             return "It must be summer now! So hot!"
@@ -45,8 +37,10 @@ class Analysis(Weather):
             return "It's rainy outside! Remember to take an umbrella!"
         elif condition == "Sunny":
             return "Wow! What a sunny day! It's a great opportunity to go out and enjoy nature."
-        elif condition == "Cloudy":
-            return "It's cloudy now."
+        elif condition == "Partially cloudy":
+            return "It's Partially cloudy now."
+        elif condition == "Overcast":
+            return "It's Overcast."
         else:
             return "The weather is a bit unusual now. Please take care! Try again later it may change."
 
