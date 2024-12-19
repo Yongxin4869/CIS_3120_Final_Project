@@ -15,4 +15,4 @@ The data that we use is from " https://www.visualcrossing.com/ "
 
 ## How to Install and Run the Program
 ### Be sure to have the following installed:
-#### Python 3.x installed.
+#### Have Python 3.x installed.
