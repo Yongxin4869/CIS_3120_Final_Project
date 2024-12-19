@@ -5,7 +5,7 @@
 The data that we use is from " https://www.visualcrossing.com/ "
 
 ## Project Description
-#### This is a Python-based tool that will retrieves wweather based data using the Visual Crossing Weather API.
+#### This is a Python-based tool that will retrieves weather based data using the Visual Crossing Weather API.
 
 ## Overview
 #### This project allows users to do the followings:
