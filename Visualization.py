@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt      #Import the matplot library to prepare draw
 
 class Visualization:
     
-    def one_day_temp(self, weather_data):          # It will show 24 hours temperature. Get 
-        temperatures = []                          # Use for loop to put all the information in [ ], then use that to draw graph
+    def one_day_temp(self, weather_data):          # This method will show us 24 hours of temperature. This is a line graph.
+        temperatures = []                          # Use for loop to put all the information in [ ], then we will use that to draw graph.
         time = []
         for day in weather_data['days']:
             for hour_data in day['hours']:
@@ -19,8 +19,8 @@ class Visualization:
         plt.grid(True)
         plt.show()
 
-    def one_day_condition(self, weather_data):         #This one is similar than the above one. This one is a bar graph.
-        conditions = []                                #It will display that day's condition. So people can decide what they should bring with them.
+    def one_day_condition(self, weather_data):         #This method is very similar to that from above. This one is a bar graph.
+        conditions = []                                #It will display that specific day's condition. This will help people decide what they should bring with them.
         time = []                                      #For example, Rainy day, you should bring an umbrella. 
         for day in weather_data['days']:
             for hour_condition in day['hours']:
